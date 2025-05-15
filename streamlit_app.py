@@ -28,7 +28,7 @@ for fruit_choosen in ingredients_list:
   ingredients_string += fruit_choosen + ' '
 #st.write(ingredients_string) 
 
-# my_insert_stmt = """ insert into smoothies.public.orders(ingredients, NAME_ON_ORDER)
+my_insert_stmt = """ insert into smoothies.public.orders(ingredients, NAME_ON_ORDER)
             values ('""" + ingredients_string + """','""" + name_on_order +"""')"""
 
 st.write(my_insert_stmt)
