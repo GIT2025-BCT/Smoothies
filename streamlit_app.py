@@ -17,7 +17,6 @@ my_dataframe = session.table("smoothies.public.fruit_options").select (col('FRUI
 my_insert_stmt = """ insert into smoothies.public.orders(ingredients, NAME_ON_ORDER)
             	values ('""" + ingredients_string + """','""" + name_on_order +"""')"""
 		time_to_insert = st.button('Submit Order')
-import requests
 if ingredients_list:  
 	ingredients_string= ''
 	for fruit_choosen in ingredients_list:
