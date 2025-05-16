@@ -26,7 +26,7 @@ if time_to_insert:
     	session.sql(my_insert_stmt).collect()
     	
 if ingredients_list:  
-	ingredients_string= ''
+	ingredients_string= ' '
 	
 	for fruit_choosen in ingredients_list:
 		ingredients_string += fruit_choosen + ' '
