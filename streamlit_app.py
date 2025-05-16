@@ -9,7 +9,7 @@ st.write(
 
 name_on_order = st.text_input("Name on the Smoothie")
 st.write("The name on the Smoothie is ", name_on_order)
-
+from snowflake.snowpark.functions import col
 cnx = st.connection("Snowflake")
 session = cnx.session()
 
