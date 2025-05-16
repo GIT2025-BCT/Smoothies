@@ -23,12 +23,12 @@ ingredients_list = st.multiselect(
 	)
 if ingredients_list:
   #st.write(ingredients_list)
-  #st.text(ingredients_list)
+  st.text(ingredients_list)
     
 ingredients_string= ''
 for fruit_choosen in ingredients_list:
   ingredients_string += fruit_choosen + ' '
-#st.write(ingredients_string) 
+st.write(ingredients_string) 
 
 my_insert_stmt = """ insert into smoothies.public.orders(ingredients, NAME_ON_ORDER)
             values ('""" + ingredients_string + """','""" + name_on_order +"""')"""
