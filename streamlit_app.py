@@ -19,12 +19,10 @@ ingredients_list = st.multiselect(
 	, my_dataframe
 	, max_selections=5
 	)
-my_insert_stmt = """ insert into smoothies.public.orders(ingredients, NAME_ON_ORDER)
+	my_insert_stmt = """ insert into smoothies.public.orders(ingredients, NAME_ON_ORDER)
             values ('""" + ingredients_string + """','""" + name_on_order +"""')"""
-time_to_insert = st.button('Submit Order')
-if time_to_insert:
-    session.sql(my_insert_stmt).collect()
-    #st.success('Your Smoothie is ordered!', icon="✅")  	
+	time_to_insert = st.button('Submit Order')
+
 if ingredients_list:  
 	ingredients_string= ' '
 	
